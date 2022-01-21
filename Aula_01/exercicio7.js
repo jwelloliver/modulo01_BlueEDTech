@@ -1,0 +1,1 @@
+console.log("Todos os dias quando acordo \nNão tenho mais \nO tempo que passou \nMas tenho muito tempo \nTemos todo o tempo do mundo");
