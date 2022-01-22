@@ -11,14 +11,35 @@ var notas100 = 0;
 var sq = 0;
 
 if (valorSaque >= 10 || valorSaque <= 600) {
-    if (valorSaque >= 100) {
+    if (valorSaque > 100) {
         notas100 = Math.floor(valorSaque / 100);
-        sq = valorSaque % 100;
-        console.log(sq);
-    }if (sq >= 50) {
+        valorSaque = valorSaque % 100;
+
+    }if (notas100 > 0) {
+        console.log('%d Notas de R$100,00',notas100);
+    }if (valorSaque > 50) {
         notas50 = Math.floor(valorSaque / 50);
-        sq = valorSaque % 50;
-        console.log(sq);
+        valorSaque = valorSaque % 50;
+
+    }if (notas50 > 0) {
+        console.log('%d Notas de R$50,00',notas50);
+    }if (valorSaque > 10) {
+        notas10 = Math.floor(valorSaque / 10);
+        valorSaque = valorSaque % 10;
+
+    }if (notas5 > 0) {
+        console.log('%d Notas de R$10,00',notas10);
+    }if (valorSaque > 5) {
+        notas5 = Math.floor(valorSaque / 5);
+        valorSaque = valorSaque % 5;
+
+    }if (notas5 > 0) {
+        console.log('%d Notas de R$5,00',notas5);
+    }if (valorSaque > 1) {
+        notas1 = valorSaque / 1;
+
+    }if (notas1 > 0) {
+        console.log('%d Notas de R$1,00',notas1);
     }
     
 }else {
