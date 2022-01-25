@@ -13,6 +13,9 @@ while (cont < quantAluno) {
     mediaTotal = mediaTotal + notaAluno[cont];
     cont++;
 }
-mediaTotal = (mediaTotal/notaAluno.length)
-console.log(`O aluno ${nomeAluno} tirou nota ${notaAluno} `);
-console.log(`Media total das notas e: ${mediaTotal}`);
+cont = 0;
+while (cont < quantAluno) {
+    console.log(`O aluno ${nomeAluno[cont]} tirou nota ${notaAluno[cont]} `); 
+    cont++;  
+}
+console.log(`Media total das notas e: ${mediaTotal/notaAluno.length}`);
