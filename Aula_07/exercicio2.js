@@ -18,7 +18,7 @@ for (let cont = 0; cont < listaNotas.length; cont++) {
     if (listaNotas[cont] > 5 && listaNotas[cont] > 7) {
         notasRecuperacao = notasRecuperacao + 1;        
         }
-    if (listaNotas[cont] < 5) {
+    if (listaNotas[cont] <= 5) {
         notasReprovados = notasReprovados + 1;
         } 
              
