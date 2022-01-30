@@ -68,6 +68,8 @@ if (pcEscolha == 'PEDRA' && minhaEscolha == 'TESOURA') {
 if (vitoriaMinha > vitoriaPc) {
     console.log(`\nVocê venceu com total de vitoria: ${vitoriaMinha}`);
     console.log(`computador perdeu com total de vitoria: ${vitoriaPc}\n`);    
+}if (vitoriaMinha == vitoriaPc) {
+    console.log(`\nNiguem venceu, Empataram ${vitoriaPc} a ${vitoriaMinha}`);
 }else{
     console.log(`\nO computador venceu com total de vitoria: ${vitoriaPc}`);
     console.log(`Você perdeu com total de vitoria: ${vitoriaMinha}\n`);
