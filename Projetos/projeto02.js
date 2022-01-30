@@ -26,6 +26,9 @@ let vitoriaPc = 0 ;
 
 const listaJogo = ['PEDRA','PAPEL','TESOURA'];
 
+// Criando um laço de repetição para quantidade de rodadas ira acontecer
+while (cont < rodadas) {
+
 // Criando a variavel minha escolha
 var minhaEscolha = prompt("Digite entre Pedra, Papel ou Tesoura: ").toUpperCase();
  
@@ -33,8 +36,8 @@ var minhaEscolha = prompt("Digite entre Pedra, Papel ou Tesoura: ").toUpperCase(
 const pcEscolha = listaJogo[Math.floor(Math.random() * listaJogo.length)];
 
 // imprimindo minha decisao e do computador
-console.log(` Minha Decisao: ${minhaEscolha}`);
-console.log(` Decisao do compudator: ${pcEscolha}`);
+console.log(`\nMinha Decisao: ${minhaEscolha}`);
+console.log(`Decisao do compudator: ${pcEscolha}\n`);
 
 // Condições para cada um Ganhar ou Perder e acumulando a vitoria de cada um na rodadas
 if (pcEscolha == 'PEDRA' && minhaEscolha == 'TESOURA') {    
@@ -55,15 +58,19 @@ if (pcEscolha == 'PEDRA' && minhaEscolha == 'TESOURA') {
 }if (pcEscolha == 'TESOURA' && minhaEscolha == 'PAPEL') {
     console.log("Computador Ganhou !!");
     vitoriaPc = vitoriaPc + 1;
+}if (pcEscolha == minhaEscolha) {
+    console.log("Ninguem Ganhou !!");
 }
+    cont++;
+} //Finalizando while
 
 // Condição fora do While para Esclarecer o vencedor por quantidade de Rodadas vencidas
 if (vitoriaMinha > vitoriaPc) {
-    console.log(`Você venceu com total de vitoria: ${vitoriaMinha}`);
-    console.log(`computador perdeu com total de vitoria: ${vitoriaPc}`);    
+    console.log(`\nVocê venceu com total de vitoria: ${vitoriaMinha}`);
+    console.log(`computador perdeu com total de vitoria: ${vitoriaPc}\n`);    
 }else{
-    console.log(`O computador venceu com total de vitoria: ${vitoriaPc}`);
-    console.log(`Você perdeu com total de vitoria: ${vitoriaMinha}`);
+    console.log(`\nO computador venceu com total de vitoria: ${vitoriaPc}`);
+    console.log(`Você perdeu com total de vitoria: ${vitoriaMinha}\n`);
 }
 
 
